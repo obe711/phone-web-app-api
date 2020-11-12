@@ -1,0 +1,25 @@
+{
+  "name": "phone-web-app-api",
+  "version": "1.0.0",
+  "description": "Phone web app api boiler plate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obe711/phone-web-app-api.git"
+  },
+  "keywords": [
+    "api",
+    "mongodb",
+    "express",
+    "boilerplate"
+  ],
+  "author": "Obediah Klopfenstein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/obe711/phone-web-app-api/issues"
+  },
+  "homepage": "https://github.com/obe711/phone-web-app-api#readme"
+}
