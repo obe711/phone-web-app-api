@@ -5,7 +5,6 @@ const sessionSchema = new mongoose.Schema(
   {
     ip: { type: String },
     user: { type: mongoose.Schema.Types.ObjectId, ref: "Users" },
-    sid: { type: String },
   },
   { timestamps: true }
 );

@@ -7,6 +7,7 @@ const cors = require("cors");
 const path = require("path");
 const mongoose = require("mongoose");
 const auth = require("./middleware/auth");
+const admin = require("./middleware/admin");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -32,9 +33,10 @@ mongoose
   .catch((err) => console.error("Could not connect...", err));
 
 // api routes
+app.use("/api/verification", require("./routes/verification"));
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/user", auth, require("./routes/user"));
-app.use("/api/admin", auth, require("./routes/admin"));
+app.use("/api/admin", auth, admin, require("./routes/admin"));
 
 // production
 if (process.env.NODE_ENV === "production") {
