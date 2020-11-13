@@ -21,6 +21,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       minlength: 4,
       maxlength: 50,
+      default: "User",
     },
     email: {
       type: String,
@@ -36,7 +37,7 @@ const userSchema = new mongoose.Schema(
     isAdmin: { type: Boolean, default: false },
     created_on: { type: Date, default: Date.now },
     updated_on: { type: Date, default: Date.now },
-    status: { type: String, default: "Active" },
+    status: { type: String, default: "Pending" },
   },
   { timestamps: { createdAt: "created_on", updatedAt: "updated_on" } }
 );
